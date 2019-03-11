@@ -1,0 +1,151 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* rating CSS from http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/ */
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label{
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+.star{
+    font-size: 1.2em;
+    padding: 0.1em;
+    color: white;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+.full-star{
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+.clear{
+    clear: both;
+}
+article .entry-header.entry-header{
+    border-bottom:1px solid #CCC;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+.details-header a{
+    text-decoration: none;
+}
+.product-details h2{
+    font-size: 1.8em;
+    margin-bottom: 0;
+}
+.product-details h3{
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+.details-header .stars{
+    margin-right: 1em;
+    display: inline-block;
+}
+.details-picture{
+    float: left;
+    padding: 0 1em 1em 0;
+}
+.product-details #reviews{
+    padding: 1em;
+    background-color: #EEE;
+}
+.product-details #reviews hr{
+    margin: 1em 0;
+}
+/* product list */
+.scwp-item-list ul,
+.scwp-item-list li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.scwp-item-list{
+    padding: 10px 0;
+}
+.scwp-item-list .cat-item > a::before{
+    color:#aaa;
+    content: '[+] ';
+}
+.scwp-item-list .cat-item > a.active::before{
+    content: '[-] ';
+}
+.scwp-item-list .cat-item .cat-item{
+    margin-left: 75px;
+}
+.scwp-item-list .cat-item ul{
+    padding-top: 10px;
+    display: none;
+}
+.scwp-item-list li{
+    margin-bottom: 25px;
+}
+.scwp-item-list li .thumbnail{
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    margin-right: 25px;
+    vertical-align: middle;
+    line-height: 75px;
+}
+.scwp-item-list li span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.scwp-item-list li a{
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}

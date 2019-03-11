@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-05-29 17:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"Language: nl-BE\n"
+"Project-Id-Version: Plugins - Sharing Club - Development (trunk)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-29 17:18+0000\n"
+"Last-Translator: admin-petitvelo <contact@netdelight.be>\n"
+"Language-Team: Dutch (Belgium)"
+
+#. Description of the plugin
+msgid ""
+"Share books, dvd, tools, toys or any object with your community. Your users "
+"can easily lend, borrow and rate items and you know who borrowed what."
+msgstr ""
+"Deel boeken, DVDs, werktuigen, speelgoed of om het even welk object met je "
+"vrienden of gemeenschap. Je gebruikers kunnen gemakkelijk uitlene, lenen en "
+"een waardering geven aan spullen terwijl jij kan opvolgen wat er gedeeld "
+"wordt en wie wat geleend heeft."
+
+#: admin-lending-form-display.php:56
+msgid "Item was successfully saved"
+msgstr "Het item is goed opgeslagen"
+
+#: admin-lending-form-display.php:58
+msgid "There was an error while saving item"
+msgstr "Er is een fout opgetreden tijdens het opslaan van de nieuwe gegevens"
+
+#: admin-lending-form-display.php:63
+msgid "Item was successfully updated"
+msgstr "De objectgegevens zijn succesvol vernieuwd"
+
+#: admin-lending-form-display.php:65
+msgid "There was an error while updating item"
+msgstr "Er is een fout opgetreden terwijl dit item werd aangepast"
+
+#: admin-lending-form-display.php:85
+msgid "Item not found"
+msgstr "Item niet gevonden"
+
+#: admin-lending-form-display.php:91
+msgid "Lending data"
+msgstr "Gegevens van het geleende item"
+
+#: admin-lending-form-display.php:96 sharing-club.php:167 sharing-club.php:168
+msgid "Lendings"
+msgstr "Uitgeleende objecten"
+
+#: admin-lending-form-display.php:96 templates/single-shared_item.php:81
+msgid "Back to list"
+msgstr "Terug naar de lijst"
+
+#: admin-lending-form-display.php:116
+msgid "Save"
+msgstr "Opslaan"
+
+#: admin-lending-form-display.php:134 admin-lending-table.php:42
+msgid "User"
+msgstr "Gebruiker"
+
+#: admin-lending-form-display.php:142 admin-lending-table.php:41
+msgid "Object"
+msgstr "Object"
+
+#: admin-lending-form-display.php:150 admin-lending-table.php:43
+msgid "Lending date"
+msgstr "UItleendatum"
+
+#: admin-lending-form-display.php:153 admin-lending-form-display.php:161
+msgid "YYYY-MM-DD"
+msgstr "DD-MM-YYYY"
+
+#: admin-lending-form-display.php:158 admin-lending-table.php:44
+msgid "Return date"
+msgstr "Datum van terugkeer"
+
+#: admin-lending-form-display.php:166 templates/single-shared_item.php:61
+msgid "Reviews"
+msgstr "Beoordelingen"
+
+#: admin-lending-form-display.php:174 admin-lending-table.php:46
+msgid "Admin notes"
+msgstr "Beheerberichten"
+
+#: admin-lending-form-display.php:182
+msgid "Rating"
+msgstr "Waardering"
+
+#: admin-lending-table-display.php:33
+msgid "Add new lending"
+msgstr "Voeg een nieuwe leenbeurt toe"
+
+#: admin-lending-table-display.php:37
+#, php-format
+msgid "Items deleted: %d"
+msgstr "Verwijderde items: %d"
+
+#: admin-lending-table.php:45
+msgid "Availability"
+msgstr "Beschikbaarheid"
+
+#: admin-lending-table.php:65
+msgid "Edit"
+msgstr "Bewerken"
+
+#: admin-lending-table.php:66 admin-lending-table.php:79
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: admin-lending-table.php:80
+msgid "Mark as returned"
+msgstr "Markeer als teruggebracht"
+
+#: sharing-club.php:15
+msgid "na"
+msgstr "na"
+
+#: sharing-club.php:16
+msgid "available"
+msgstr "beschikbaar"
+
+#: sharing-club.php:17
+msgid "requested"
+msgstr "aangevraagd"
+
+#: sharing-club.php:28
+msgid "Please enter a rating between 0 and 5 (or leave empty)."
+msgstr "Gelieve een waardering te geven tussen 0 en 5 (of laat blanco)."
+
+#: sharing-club.php:29
+msgid "Please enter a valid comment."
+msgstr "Voeg een correcte reactie toe."
+
+#: sharing-club.php:33
+msgid "Please enter a valid date."
+msgstr "Gebruik een geldige datum."
+
+#: sharing-club.php:65 sharing-club.php:68
+msgid "Objects"
+msgstr "Objecten"
+
+#. #-#-#-#-#  sharing-club-code.pot (Sharing Club 1.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: sharing-club.php:67
+msgid "Sharing Club"
+msgstr "Sharing Club"
+
+#: sharing-club.php:69
+msgid "All objects"
+msgstr "Alle objecten"
+
+#: sharing-club.php:70 sharing-club.php:78
+msgid "Add object"
+msgstr "Object toevoegen"
+
+#: sharing-club.php:71
+msgid "Edit object"
+msgstr "Object bewerken"
+
+#: sharing-club.php:72
+msgid "New object"
+msgstr "Nieuw object"
+
+#: sharing-club.php:73
+msgid "View object"
+msgstr "Object bekijken"
+
+#: sharing-club.php:74
+msgid "Search object"
+msgstr "Zoek een object"
+
+#: sharing-club.php:75
+msgid "Object not found"
+msgstr "Object niet gevonden"
+
+#: sharing-club.php:76
+msgid "Trashed object not found"
+msgstr "Verwijderd object niet gevonden"
+
+#: sharing-club.php:175 sharing-club.php:176
+msgid "Lending form"
+msgstr "Uitleenformulier"
+
+#: sharing-club.php:255
+#, php-format
+msgid "%s requested an object"
+msgstr "%s heeft een object gevraagd"
+
+#: sharing-club.php:256
+msgid ""
+"There's a new request for lending. You can manage the requests connecting to "
+":"
+msgstr ""
+"Er is een nieuwe aanvraag om iets te lenen. Je mag deze aanvragen beheren "
+"als je hier klikt: "
+
+#: templates/single-shared_item.php:32
+msgid "review(s)"
+msgstr "beoordeling(en)"
+
+#: templates/single-shared_item.php:43
+msgid "You have requested this object."
+msgstr "Je hebt dit object reeds aangevraagd"
+
+#: templates/single-shared_item.php:44
+msgid "You borrowed this object."
+msgstr "Je hebt dit object reeds in bruikleen."
+
+#: templates/single-shared_item.php:45
+#, php-format
+msgid "This object is currently borrowed by %s."
+msgstr "Dit object is momenteel geleend door %s."
+
+#: templates/single-shared_item.php:52
+msgid "Book"
+msgstr "Boek"
+
+#: templates/single-shared_item.php:56
+#, php-format
+msgid ""
+"Please <a href='%s'>register</a> or <a href='%s'>log in</a> to book this "
+"item."
+msgstr ""
+"<a href='%s'>Registreer je</a>  of <a href='%s'>log in</a> om dit object te "
+"reserveren"
+
+#: templates/single-shared_item.php:64
+msgid "Your review"
+msgstr "Je beoordeling"
+
+#: templates/single-shared_item.php:69
+msgid "Your rating"
+msgstr "Je waardering"
+
+#: templates/single-shared_item.php:78
+msgid "Send"
+msgstr "Versturen"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/sharing-club/"
+msgstr "https://wordpress.org/plugins/sharing-club/"
+
+#. Author of the plugin/theme
+msgid "Manu Z."
+msgstr "Manu Z."
+
+#. Author URI of the plugin/theme
+msgid "http://netdelight.be/"
+msgstr "http://netdelight.be/ "
