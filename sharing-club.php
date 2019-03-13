@@ -4,7 +4,7 @@ Plugin Name: Sharing Club
 Plugin URI: https://wordpress.org/plugins/sharing-club/
 Description: Share books, dvd, tools, toys or any object with your community. Your users can easily lend, borrow and rate items and you know who borrowed what.
 Author: Manu Z.
-Version: 1.2.2
+Version: 1.3
 Author URI: http://netdelight.be/
 Text Domain: sharing-club
 Domain Path: /languages/
@@ -214,29 +214,27 @@ function scwp_exclude_comments( $clauses ) {
 
 /* Filter the single_template & archive_template with our custom function*/
 function scwp_custom_post_templates($template) {
-    if(is_user_logged_in()){
-        global $post;
-        $archive_page = 'archive-shared_item.php';
-        $single_page = 'single-shared_item.php';
-        $exists_in_theme = locate_template(array($archive_page, $single_page), false);
-        if ( $exists_in_theme != '' ) {
-            $template = $exists_in_theme;
-        }else{
-            wp_enqueue_style( 'scwp-public', plugin_dir_url( __FILE__ ) . 'css/lending-library-public.css');
-            wp_enqueue_script( 'scwp-public', plugin_dir_url( __FILE__ ) . 'js/lending-library-public.js', array( 'jquery', 'jquery-ui-datepicker' ) );
-            if ( is_post_type_archive ( 'shared_item' ) ) {
-                /* Checks for archive template */
-                if(file_exists(plugin_dir_path( __FILE__ ).'/templates/'.$archive_page ))
-                    $template =  plugin_dir_path( __FILE__ ).'/templates/'.$archive_page;
-            }else if ($post->post_type == 'shared_item'){
-                /* Checks for single template */
-                if(file_exists(plugin_dir_path( __FILE__ ).'/templates/'.$single_page))
-                    $template = plugin_dir_path( __FILE__ ).'/templates/'.$single_page;
-            }
+    global $post;
+    $archive_page = 'archive-shared_item.php';
+    $single_page = 'single-shared_item.php';
+    $exists_in_theme = locate_template(array($archive_page, $single_page), false);
+    if ( $exists_in_theme != '' ) {
+        $template = $exists_in_theme;
+    }else{
+        wp_enqueue_style( 'scwp-public', plugin_dir_url( __FILE__ ) . 'css/lending-library-public.css');
+        wp_enqueue_script( 'scwp-public', plugin_dir_url( __FILE__ ) . 'js/lending-library-public.js', array( 'jquery', 'jquery-ui-datepicker' ) );
+        if ( is_post_type_archive ( 'shared_item' ) ) {
+            /* Checks for archive template */
+            if(file_exists(plugin_dir_path( __FILE__ ).'/templates/'.$archive_page ))
+                $template =  plugin_dir_path( __FILE__ ).'/templates/'.$archive_page;
+        }else if ($post->post_type == 'shared_item'){
+            /* Checks for single template */
+            if(file_exists(plugin_dir_path( __FILE__ ).'/templates/'.$single_page))
+                $template = plugin_dir_path( __FILE__ ).'/templates/'.$single_page;
         }
-
-        return $template;
     }
+
+    return $template;
 }
 add_filter('single_template',   'scwp_custom_post_templates');
 add_filter('archive_template',  'scwp_custom_post_templates' ) ;
@@ -284,4 +282,6 @@ function scwp_process_data(){
 }
 add_action( 'template_redirect', 'scwp_process_data' );
 
+// ADMIN OPTION PAGE
+require_once plugin_dir_path( __FILE__ ) . 'admin-options.php';
 

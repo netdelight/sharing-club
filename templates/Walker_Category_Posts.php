@@ -42,14 +42,18 @@ class Walker_Category_Posts extends Walker_Category{
                 $query = "SELECT 
                 CASE WHEN comment_date = 0 THEN 'requested'
                 WHEN comment_date_gmt > CURRENT_TIMESTAMP OR comment_date_gmt = 0 THEN 'na'
-                ELSE 'available' END availability 
-                FROM $wpdb->comments WHERE comment_post_ID = $post->ID AND comment_type = 'lending' LIMIT 1";
+                ELSE 'available' END availability, 
+                user_nicename
+                FROM $wpdb->comments 
+                LEFT JOIN $wpdb->users ON $wpdb->comments.user_id = $wpdb->users.ID
+                WHERE comment_post_ID = $post->ID AND comment_type = 'lending' LIMIT 1";
                 $lending = $wpdb->get_row($query);
-        
+                $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
                 $output .= '<li>';
-                $output .= '<div class="thumbnail">'.get_the_post_thumbnail($post->ID, 'thumbnail').'</div>';
+                $output .= '<div class="thumbnail">'.$thumb.'</div>';
                 $output .= '<span class="text"><a href="'.get_the_permalink($post->ID).'">'.get_the_title($post->ID).'</a><br />';
-                $output .=  __(isset($lending)?$lending->availability:'available', 'sharing-club');
+                if($lending->availability=='na')$output .= sprintf(__('This object is currently borrowed by %s.', 'sharing-club'), $lending->user_nicename);
+                else $output .= __(isset($lending)?$lending->availability:'available', 'sharing-club');
                 $output .= '</span>';
                 $output .= '</li>';
             }

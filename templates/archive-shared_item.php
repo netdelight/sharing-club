@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) || !is_user_logged_in()  ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' )) exit; // Exit if accessed directly
 get_header();
 ?>
 <div id="primary" class="content-area">
@@ -7,6 +7,12 @@ get_header();
         <article class="hentry">
             
         <?php
+        // don't display if the club is private !
+        if( !is_user_logged_in() && !scwp_get_option('public')){
+            echo '<h3>'.__('Sorry, you are not allowed to view this item.').'</h3>';
+            get_footer();
+            exit();
+        }
         // list of items
         require_once('Walker_Category_Posts.php');
         echo '<ul class="scwp-item-list">';

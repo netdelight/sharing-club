@@ -57,6 +57,11 @@ Make sure your theme supports the "featured images" so you can display the share
 NB: dates are currently in the dd/mm/yyyy format
 
 == Changelog ==
+= 1.3 =
+- Fixed the user name display bug on the shared_item page
+- Added an option to make your shared object visible to anybody (without login)
+- Added an option to hide the rating and comment form
+
 = 1.2 =
 - Fixed the capabilities bug for admin.
 - Added dutch translation (thanks again Jeroen).
