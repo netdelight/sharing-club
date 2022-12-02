@@ -52,7 +52,7 @@ class Walker_Category_Posts extends Walker_Category{
                 $output .= '<li>';
                 $output .= '<div class="thumbnail">'.$thumb.'</div>';
                 $output .= '<span class="text"><a href="'.get_the_permalink($post->ID).'">'.get_the_title($post->ID).'</a><br />';
-                if($lending->availability=='na')$output .= sprintf(__('This object is currently borrowed by %s.', 'sharing-club'), $lending->user_nicename);
+                if(isset($lending) && $lending->availability=='na')$output .= sprintf(__('This object is currently borrowed by %s.', 'sharing-club'), $lending->user_nicename);
                 else $output .= __(isset($lending)?$lending->availability:'available', 'sharing-club');
                 $output .= '</span>';
                 $output .= '</li>';

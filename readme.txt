@@ -1,8 +1,8 @@
 === Sharing Club ===
-Contributors: netdelight, jdevroed, mpol
+Contributors: netdelight, jdevroed, mpol, joeytroy
 Tags: share, lend, community, borrow, loan, lending, book, library, buddypress, sharing club
 Requires at least: 4.0
-Tested up to: 5.1
+Tested up to: 6.1.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -57,6 +57,9 @@ Make sure your theme supports the "featured images" so you can display the share
 NB: dates are currently in the dd/mm/yyyy format
 
 == Changelog ==
+= 1.3.1 = 
+- Fixed some missing translations. Thank you joeytroy :)
+
 = 1.3 =
 - Fixed the user name display bug on the shared_item page
 - Added an option to make your shared object visible to anybody (without login)

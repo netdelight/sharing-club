@@ -4,7 +4,7 @@ Plugin Name: Sharing Club
 Plugin URI: https://wordpress.org/plugins/sharing-club/
 Description: Share books, dvd, tools, toys or any object with your community. Your users can easily lend, borrow and rate items and you know who borrowed what.
 Author: Manu Z.
-Version: 1.3
+Version: 1.3.1
 Author URI: http://netdelight.be/
 Text Domain: sharing-club
 Domain Path: /languages/
